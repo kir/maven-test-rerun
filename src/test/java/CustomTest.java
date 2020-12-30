@@ -20,4 +20,10 @@ public class CustomTest {
         }
     }
 
+    @Test
+    public synchronized void slowTest() throws InterruptedException {
+        Thread.sleep(10000);
+        Assert.fail();
+    }
+
 }
